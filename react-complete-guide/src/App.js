@@ -83,7 +83,17 @@ class App extends Component {
       { name: "Siya Shukla", age: 24, hobby: 'My Hobby is steching' }
       ]
     })
-    
+  }
+
+  handleNameChanged = (event) => {
+    console.log('hangle Name changed called')
+    this.setState({
+      persons: [
+        { name: 'Abhishek', age: 29, hobby: 'My Hobby is coding, biking, racing, reading' },
+      { name: event.target.value, age: 25, hobby: 'My Hobby is travling, business'},
+      { name: "Siya Shukla", age: 24, hobby: 'My Hobby is steching' }
+      ]
+    })
   }
 
   render() {
@@ -100,7 +110,8 @@ class App extends Component {
         <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age}
-          click={this.switchHandler.bind(this, 'Abhi', 28)}>
+          click={this.switchHandler.bind(this, 'Abhi', 28)}
+          changed={this.handleNameChanged}>
           {this.state.persons[1].hobby}
         </Person>
 
