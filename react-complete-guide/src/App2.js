@@ -1,3 +1,6 @@
+/*
+    Assignment: User Input and Outpur 
+*/
 import React, {Component} from 'react';
 
 import UserInput from './Users/UserInput'
